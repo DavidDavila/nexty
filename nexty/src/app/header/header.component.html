@@ -1,0 +1,9 @@
+<header>
+	<app-menu-button></app-menu-button>
+	<dl *ngIf="data?.picture?.data.url">
+		<dt><img [src]="data?.picture?.data.url" alt=""></dt>
+		<dd>{{data.first_name}}</dd>
+	</dl>
+	<h1>Nexty</h1>
+
+</header>

@@ -1,0 +1,16 @@
+<section id="menu-button">
+	<article (click)="isMenuOpen = !isMenuOpen">
+		<div></div>
+		<div></div>
+		<div></div>
+	</article>	
+	<ul *ngIf="isMenuOpen">
+		<li>This is Nexty</li>
+		<li>About us</li>
+		<li>We love feedback</li>
+		<li>We love feedback</li>
+		<li>Terms and conditions</li>
+		<li (click)="logout()">Logout</li>
+	</ul>
+</section>
+	

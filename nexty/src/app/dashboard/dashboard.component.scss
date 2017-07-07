@@ -1,0 +1,17 @@
+#dashboard{
+	margin-top:330px;
+	background-color: #f6f6f6;
+	min-height:calc(100vh - 330px);
+	>ul{
+		max-width: 660px;
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+		>li{
+			margin-bottom: 20px;
+			&:nth-child(1){
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
