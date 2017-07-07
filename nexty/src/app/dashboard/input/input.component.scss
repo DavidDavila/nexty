@@ -12,10 +12,11 @@
   		display: inline-block;
   	}
   	textarea{
-  		padding-left: 8px;
+  		padding: 8px 8px 0;
   		resize: none;
   		display: inline-block;
-  		border:0;
+  		border: 0;
+  		height: 40px;
   		width: calc(100% - 44px);
   		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   		  font-size: 15px;
