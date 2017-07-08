@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FacebookService } from './shared/services/facebook.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss'],
+  providers: [FacebookService]
 })
 export class AppComponent {
-  title = 'app works!';
+  constructor(private _fb: FacebookService) {
+
+  }
+  ngOnInit(){
+  	this._fb.init();
+  }
 }
