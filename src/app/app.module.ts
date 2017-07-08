@@ -14,6 +14,7 @@ import { InputComponent } from './dashboard/input/input.component';
 import { MenuButtonComponent } from './header/menu-button/menu-button.component';
 
 import { FacebookService } from './shared/services/facebook.service';
+import { ContenteditableDirective } from './shared/directives/contenteditable.directive';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { FacebookService } from './shared/services/facebook.service';
     ContextMenuComponent,
     InputComponent,
     MenuButtonComponent,
+    ContenteditableDirective,
   ],
   imports: [
     BrowserModule,

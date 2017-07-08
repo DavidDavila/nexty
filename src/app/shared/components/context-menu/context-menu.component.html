@@ -1,3 +1,7 @@
-<p>
-  context-menu works!
-</p>
+<div class="contextMenu" [ngClass]="style">	
+	<ul>
+		<li *ngFor="let option of options, let i = index" value={{i}} [innerHtml]="option" (click)="setOption.emit(option)"></li>
+
+	</ul>
+</div>
+<div class="fade">	</div>

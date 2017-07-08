@@ -1,0 +1,35 @@
+.tooltip{
+	line-height: 28px;
+    white-space: nowrap;
+    transform: translateX(calc(-50% + 15px) );
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.06);
+    font-size: 13px;
+    text-align: center;
+    padding: 0 20px;
+    bottom: -38px;
+    display: none;
+    &:after{
+    	position: absolute;
+    	width: 0;
+    	height: 0;
+    	border-style: solid;
+    	border-width: 7px 7px 7px;
+    	content: '';
+    	top: -15px;
+    	left: calc(50% - 4px);
+    }
+	&.black{
+		background-color: #252d34;
+		color:#fff;
+		border: solid 1px #252d34;
+		&:after{
+			border-color: transparent transparent #252d34 transparent;
+
+		}
+	}
+}
+input[type="file"] {
+              cursor: pointer;
+            }

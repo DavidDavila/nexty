@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tootlip',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tootlip.component.scss']
 })
 export class TootlipComponent implements OnInit {
-
+	@Input() text: string;
+	@Input() style: string;
   constructor() { }
 
   ngOnInit() {

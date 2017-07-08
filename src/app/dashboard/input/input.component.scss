@@ -3,42 +3,89 @@
   padding: 10px;
   #comment-user{
   	width: 100%;
-  	padding:10px;
+  	padding: 10px 10px 7px;
   	background-color:#fff;
     border: solid 1px #baeaea;
+    margin-bottom: 10px;
+    display: flex;
   	img{
-  		object-fit: contain;
-  		width: 40px;
+  		object-fit: cover;  		
   		height: 40px;
+      width: 40px;
   		display: inline-block;
   	}
-  	textarea{
-  		padding: 8px 8px 0;
+  	div{
+  		padding: 8px 8px 0 5px;
   		resize: none;
   		display: inline-block;
   		border: 0;
-  		height: 40px;
-  		width: calc(100% - 44px);
-  		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  		  font-size: 15px;
-  		  line-height: 1.53;
-  		  color: #00b0b2;
-  		}
-  		&::-moz-placeholder { /* Firefox 19+ */
-  		  font-size: 15px;
-  		  line-height: 1.53;
-  		  color: #00b0b2;
-  		}
-  		&:-ms-input-placeholder { /* IE 10+ */
-  		  font-size: 15px;
-  		  line-height: 1.53;
-  		  color: #00b0b2;
-  		}
-  		&:-moz-placeholder { /* Firefox 18- */
-  		  font-size: 15px;
-  		  line-height: 1.53;
-  		  color: #00b0b2;
-  		}
+  		min-height: 40px;
+      margin-left: 5px;
+  	   flex:1;
+  		font-size: 15px;
+  		line-height: 1.53;
+  		color: #00b0b2;
+      vertical-align: top;
+      text-align: left;  				
   	}
+    ul#images{
+      overflow: hidden;
+      li{
+        display: inline-block;
+        margin-left: 10px;
+        img{
+          height: 56px;
+          width: 56px;
+        }
+      }
+    }
+  }
+  >ul{
+    li{
+      width: 38px;
+      height: 38px;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #d0e8e8;
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: top;
+      position: relative;
+      >div{
+        width: 38px;
+        height: 38px;
+      }
+      >input{
+        opacity: 0;
+        cursor:pointer;
+        width: 38px;
+        height: 38px;        
+        padding-top: 30px;
+      }
+      &:last-child{
+        cursor: default;
+        width: calc( 100% - 100px);
+        text-align: right;
+        background-color: transparent;
+        margin-right: 0;
+        button{
+          cursor: pointer;
+          padding: 0 45px;
+          line-height: 36px;
+          border-radius: 3px;
+          outline: none;
+          box-shadow: none;
+          border: 0;
+          background-color: #f5a623;
+          font-size: 15px;
+          font-weight: bold;
+          text-align: center;
+          color: #ffffff;
+          &:hover{
+            background-color: #df961e;
+          }
+        }
+      }
+    }
   }
 }

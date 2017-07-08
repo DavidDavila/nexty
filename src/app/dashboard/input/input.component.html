@@ -1,11 +1,26 @@
 <article id="user-box" >
 	<div id="comment-user" >
 		<img [src]="data?.picture?.data.url" alt="">
-		<textarea no-resize placeholder="Anything to share with people around you?"></textarea>{{data}}
+		<div contenteditable="true" [ceModel]="name"
+        [ceDefault]="'Anything to share with people around you'" (ceChange)= "name=$event"></div>
+        <ul *ngIf="uploadedImages !== []" id="images">
+        	<li *ngFor="let image of uploadedImages, let i = index;" (click)="deleteImg(i)">
+				<img [src]="image" alt="">
+        	</li>
+        </ul>
 	</div>
-	<div>
-		<div id="upload-file"></div>
-		<div id="time"></div>
-		<button (click)="login()"></button>
-	</div>
-</article>suerte
+	<ul>
+		<li id="upload-file" class="with-tooltip">
+			<input type="file" (change)="previewImg($event)">
+			<app-tootlip [text]="'Upload photo or gif'" [style]="'black top'"></app-tootlip>
+		</li>
+		<li id="time" (click)="showTime = !showTime">
+			<div class="with-tooltip">
+				<app-tootlip  *ngIf="!showTime" [text]="'Visible ' + visibleTime " [style]="'black top'"></app-tootlip>
+			</div>
+						
+			<app-context-menu (setOption)="setTime($event)" *ngIf="showTime" [options]="optionsTime" [style]="'bottom'"></app-context-menu>
+		</li>
+		<li><button (click)="login()">Publish</button></li>
+	</ul>
+</article>

@@ -12,6 +12,7 @@
 		align-content: center;
 		padding:15px 22px;
 		border-right: solid 1px #e5e5e5;
+		cursor: pointer;
 		>div{
 			width: 17px;
 			height: 2px;
@@ -28,6 +29,7 @@
 		border: solid 1px #e7e7e7;
 		position: relative;
 		left: 6px;
+		z-index: 9;
 		top: 6px;
 		&:after, &:before {
 			bottom: 100%;
@@ -58,6 +60,9 @@
 			line-height: 40px;
 			font-size: 15px;
 			cursor: pointer;
+			&:hover{
+				background-color: #f6f6f6;
+			}
 			&:last-child{
 				background-color: #252d34;
 				color: #fff;
