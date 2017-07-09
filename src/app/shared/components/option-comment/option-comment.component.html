@@ -1,3 +1,10 @@
-<p>
-  option-comment works!
-</p>
+<article class="option-comment">
+	<div class="heart" (click)="sendLike()">
+		<span class="likes" *ngIf="likes > 0">{{ likes}}</span>
+		<span class="ico-heart"></span>
+		<app-tootlip *ngIf="showTooltip" [text]="textTooltip" [style]="'white right'"></app-tootlip>
+	</div>
+	<div class="option-button">
+		
+	</div>
+</article>

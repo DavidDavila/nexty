@@ -71,3 +71,18 @@ body{
     }
   }
 }
+
+.ico-heart{
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  background-image: url(/assets/img/heart-empty.png);
+  background-size: auto 13px;
+  background-position: center right;
+  background-repeat: no-repeat; 
+  &.in{
+    padding: 0 11px;
+    height: 12px;
+    background-position: center center;
+  }
+}

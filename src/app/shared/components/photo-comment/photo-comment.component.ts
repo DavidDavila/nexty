@@ -14,17 +14,17 @@ export class PhotoCommentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  	this.calculateBorder(this.time)
   }
-  calculateBorder(element, event){
-	var val = parseInt(event.currentTarget.value);
-	var $circle = element
+  calculateBorder(val){
+	val = parseInt(val);
 
 	if (isNaN(val)) {
 	val = 100; 
 	}
 	else{
-	var r = $circle.getAttribute('r')
-	var c = Math.PI*(r*2);
+	
+	var c = Math.PI*(25*2);
 
 	if (val < 0) { val = 0;}
 	if (val > 100) { val = 100;}

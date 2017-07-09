@@ -11,6 +11,7 @@ export class TootlipComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  	console.log(this.text)
   }
 
 }

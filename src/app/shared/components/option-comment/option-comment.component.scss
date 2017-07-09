@@ -1,0 +1,26 @@
+.option-comment{
+	>div{
+		background-size: contain;
+		background-size: auto 13px;
+		background-position: center;
+		background-repeat: no-repeat;
+  		display: inline-block;
+    	vertical-align: top;
+	}
+	.option-button{
+		width: 20px;
+  		height: 17px;
+		background-image: url('/assets/img/option.png')		
+	}
+	.heart{
+		font-size: 13px;
+		line-height: 1;
+		color: #fd6068;
+		position: relative;		
+		.likes{
+			display: inline-block;
+			vertical-align: top;
+			padding-top: 3px;
+		}
+	}
+}

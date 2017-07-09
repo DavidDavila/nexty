@@ -4,12 +4,10 @@
     transform: translateX(calc(-50% + 15px) );
     position: absolute;
     border-radius: 3px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .46);
     font-size: 13px;
     text-align: center;
     padding: 0 20px;
-    bottom: -38px;
-    display: none;
     &:after{
     	position: absolute;
     	width: 0;
@@ -29,7 +27,25 @@
 
 		}
 	}
+    &.white{
+        background-color: #fff;
+        color:#b2b2b2;
+        border: solid 1px #e5e5e5;
+       
+    }
+    &.top{
+        bottom: -38px;
+    }
+    &.right{
+        left: calc(100%);
+        transform: translateX(10%) translateY(-90%);
+        &:after{
+            top: calc(50% - 7px);
+            left: -13px;
+            border-color: transparent #fff transparent transparent;
+        }
+    }  
 }
 input[type="file"] {
-              cursor: pointer;
-            }
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-option-comment',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OptionCommentComponent implements OnInit {
 
+	@Input() likes: number;
+	public textTooltip: string = 'You <span class="ico-heart in"></span> this';
+	public showTooltip: boolean = false
   constructor() { }
 
   ngOnInit() {
+  }
+  sendLike(){
+  	this.showTooltip = true;
+  	setTimeout(() => {
+  		this.showTooltip = false;
+  	}, 3000)
   }
 
 }
