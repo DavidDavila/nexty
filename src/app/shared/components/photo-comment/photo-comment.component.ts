@@ -11,10 +11,12 @@ export class PhotoCommentComponent implements OnInit {
 	@Input() time: string;
 	public r: number = 90;
 	public pct: number;
+	public textTooltip: string 
   constructor() { }
 
   ngOnInit() {
   	this.calculateBorder(this.time)
+  	this.textTooltip = this.time + ' hours left';
   }
   calculateBorder(val){
 	val = parseInt(val);

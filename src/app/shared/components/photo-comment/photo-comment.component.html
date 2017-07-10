@@ -1,6 +1,7 @@
-<div class="photo-comment" #myProfile>
+<div class="photo-comment with-tooltip" #myProfile>
 	<img [src]="photo" alt="">
 	<svg _ngcontent-pok-9="" id="svg" version="1.1" viewPort="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
 	 <circle _ngcontent-pok-9="" class="bar" cx="26" cy="26" fill="transparent" r="25" stroke-dasharray="160"  [style.strokeDashoffset]="pct + 'px'" ></circle>
 	</svg>
+	<app-tootlip [text]="textTooltip" [style]="'orange left'"></app-tootlip>
 </div>

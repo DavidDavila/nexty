@@ -10,7 +10,8 @@
 	.option-button{
 		width: 20px;
   		height: 17px;
-		background-image: url('/assets/img/option.png')		
+  		position: relative;
+		background-image: url('/assets/img/option.png');		
 	}
 	.heart{
 		font-size: 13px;
@@ -24,3 +25,11 @@
 		}
 	}
 }
+.ico {
+	    display: inline-block;
+	    line-height: 30px;
+	    width: 40px;
+	    padding: 0;
+	    height: 30px;
+	    margin: 0;
+	}

@@ -23,4 +23,11 @@
 		left: 0;
  		transform: translateX(calc(-50% + 20px));
  	}
+ 	&.right{ 		
+ 		left: calc(100%);
+ 		top: 0;
+ 	}
+ 	.ico{
+
+ 	}
 }

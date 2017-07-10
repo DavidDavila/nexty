@@ -4,7 +4,8 @@
 		<span class="ico-heart"></span>
 		<app-tootlip *ngIf="showTooltip" [text]="textTooltip" [style]="'white right'"></app-tootlip>
 	</div>
-	<div class="option-button">
+	<div class="option-button" (click)="showContextMenu = !showContextMenu">
+		<app-context-menu (setOption)="setOption($event)" *ngIf="showContextMenu" [options]="options" [style]="'right'"></app-context-menu>
 		
 	</div>
 </article>

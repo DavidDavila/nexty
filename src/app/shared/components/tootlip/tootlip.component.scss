@@ -4,10 +4,11 @@
     transform: translateX(calc(-50% + 15px) );
     position: absolute;
     border-radius: 3px;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .46);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .26);
     font-size: 13px;
     text-align: center;
     padding: 0 20px;
+    z-index: 8;
     &:after{
     	position: absolute;
     	width: 0;
@@ -15,8 +16,6 @@
     	border-style: solid;
     	border-width: 7px 7px 7px;
     	content: '';
-    	top: -15px;
-    	left: calc(50% - 4px);
     }
 	&.black{
 		background-color: #252d34;
@@ -35,6 +34,10 @@
     }
     &.top{
         bottom: -38px;
+        &:after{
+            top: -15px;
+            left: calc(50% - 4px);
+        }
     }
     &.right{
         left: calc(100%);
@@ -45,6 +48,22 @@
             border-color: transparent #fff transparent transparent;
         }
     }  
+    &.left{
+        right: calc(100%);
+        transform: translateX(-5%) translateY(45%);
+        top: 0;
+        &:after{
+            top: calc(50% - 7px);
+            left: 100%;
+            border-color: transparent transparent transparent #f5a623;
+        }
+    }
+    &.orange{
+        color: #fff;
+        background-color: #f5a623;
+        border: solid 1px #f5a623;
+       
+    }
 }
 input[type="file"] {
   cursor: pointer;

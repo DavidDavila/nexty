@@ -13,5 +13,14 @@ export class AppComponent {
   }
   ngOnInit(){
   	this._fb.init();
+  	if(navigator.geolocation){
+  	    navigator.geolocation.getCurrentPosition(position => {  	       
+  	       console.log(position.coords); 
+  	    }, (error) => {
+  	    	console.log('error')
+  	    });
+  	}else {
+  		console.log('no location');
+  	}
   }
 }
