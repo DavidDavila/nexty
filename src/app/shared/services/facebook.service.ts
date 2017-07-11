@@ -14,12 +14,15 @@ export class FacebookService {
   constructor() {
     FB.init({
       appId      : '649753935223490',
+      /*appId      : '124636538143910',
+      */
       cookie     : false,  // enable cookies to allow the server to access
                           // the session
       xfbml      : true,  // parse social plugins on this page
       version    : 'v2.9' // use graph api version 2.5
     });
     this.data = new BehaviorSubject('');
+    this.init();
   }
 
   init(){
@@ -49,10 +52,14 @@ export class FacebookService {
   }
 
   me(){
-    
-    FB.api('/me?fields=birthday,about,email,devices,education,first_name,gender,hometown,id,inspirational_people,installed,interested_in,is_shared_login,is_verified,languages,last_name,link,locale,location,meeting_for,middle_name,name,favorite_athletes,favorite_teams,political,quotes,relationship_status,religion,age_range,picture.width(120)', (response) => {
-      this.data.next(response);
-    });
+    FB.api(
+      '/me',
+      'GET',
+      {"fields":"birthday,about,email,devices,education,first_name,gender,hometown,id,inspirational_people,installed,interested_in,is_shared_login,is_verified,languages,last_name,link,locale,location,meeting_for,middle_name,name,favorite_athletes,favorite_teams,political,quotes,relationship_status,religion,age_range,picture.width(240)"},
+      (response) => {
+        this.data.next(response);
+      }
+    );      
   }
   getData(){
     return this.data.asObservable();
