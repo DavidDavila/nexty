@@ -85,4 +85,25 @@ body{
     height: 12px;
     background-position: center center;
   }
+  &.active{
+    background-image: url(/assets/img/heart-active.png);
+  }
+}
+.ico-delete{
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  background-image: url(/assets/img/delete.png);
+  background-size: auto 13px;
+  background-position: center right;
+  background-repeat: no-repeat; 
+}
+.ico-report{
+  display: inline-block;
+  width: 14px;
+  height: 17px;
+  background-image: url(/assets/img/report.png);
+  background-size: auto 13px;
+  background-position: center right;
+  background-repeat: no-repeat; 
 }

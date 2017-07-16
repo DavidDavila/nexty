@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FacebookService } from './../shared/services/facebook.service';
 
 @Component({
   selector: 'app-radar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RadarComponent implements OnInit {
 
-  constructor() { }
-
+	public data : any;
+  constructor(private _fb: FacebookService) { }
+  
   ngOnInit() {
+  	this._fb.getData().subscribe((data)=>{
+  		console.log(data)
+  		this.data = data;
+  	})
   }
 
 }

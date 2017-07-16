@@ -5,4 +5,29 @@
 	background: #fff;
 	height: 330px;
 	width:100%;
+	background-image: url(/assets/img/radar.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	>article{
+		>div{			
+			padding: 3px 3px 0px;
+		    border: 1px solid #f0f0f0;
+		    position: absolute;
+		    border-radius: 50%;		    
+			>img{
+				width: 34px;
+				height: 34px;
+				border-radius: 50%;
+			}
+			&.me{
+				top: calc( 50% - 30px);
+				left: calc( 50% - 30px);
+				>img{
+					width: 60px;
+					height: 60px;
+				}
+			}
+		}
+	}
 }

@@ -33,6 +33,19 @@
       li{
         display: inline-block;
         margin-left: 10px;
+        position: relative;
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: url(/assets/img/eliminar.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 15px;
+          height: 15px;
+        }
         img{
           height: 56px;
           width: 56px;
@@ -43,6 +56,7 @@
   >ul{
     li{
       width: 38px;
+      background-position: center;
       height: 38px;
       border-radius: 4px;
       cursor: pointer;
@@ -51,9 +65,11 @@
       margin-right: 8px;
       vertical-align: top;
       position: relative;
+      background-size: 20px;
+      background-repeat: no-repeat;
       >div{
         width: 38px;
-        height: 38px;
+        height: 38px;       
       }
       >input{
         opacity: 0;
@@ -88,4 +104,65 @@
       }
     }
   }
+  #time{
+    background-image: url('/assets/img/time.png');
+  }
+  #upload-file{
+    background-image: url('/assets/img/img.png');
+  }
+}
+@media (max-width: 670px) {
+#user-box{  
+ 
+  #comment-user{
+    padding: 20px 20px 18px;
+    img{
+      border-radius: 5px;
+    }
+    div{
+         padding: 0px 8px 0 15px;
+         font-size: 14px;
+        
+         color: #666666;     
+    }
+    ul#images{
+   
+      li{
+     
+        &:after{
+        
+        }
+        img{
+      
+        }
+      }
+    }
+  }
+  >ul{
+    li{
+      
+      >div{
+        
+      }
+      >input{
+    
+      }
+      &:last-child{
+       
+        button{
+      
+          &:hover{
+           
+          }
+        }
+      }
+    }
+  }
+  #time{
+ 
+  }
+  #upload-file{
+   
+  }
+}
 }

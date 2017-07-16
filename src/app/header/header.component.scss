@@ -48,3 +48,26 @@ header{
 		}
 	}
 } 
+
+@media (max-width: 670px) {
+  header{
+ 
+  	h1{
+  	
+  	}
+  	dl{
+  		left: auto;
+  		right: 20px;
+  		dt{
+  		
+  			img{
+  				border-radius: 0;
+  			}
+  		}
+  		dd{
+  			display: none;
+  		}
+  	}
+  } 
+
+}

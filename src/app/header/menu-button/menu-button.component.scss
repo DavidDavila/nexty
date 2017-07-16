@@ -66,6 +66,10 @@
 			&:last-child{
 				background-color: #252d34;
 				color: #fff;
+				background-image: url('/assets/img/logout.png');	
+				background-size: 13px auto;
+				background-repeat: no-repeat;
+				background-position:  calc(100% - 13px) center;	
 			}
 		} 
 	}

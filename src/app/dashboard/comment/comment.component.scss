@@ -20,18 +20,44 @@
 			display: block;
 		}
 		.time{
+			display: none;
 
 		}
 		.km{
-
+			display: block;
 		}
-		.commentText{
-			font-size: 15px;
-			line-height: 1.53;
-			color: #666666;
-			a{
-				color: #15a2a3;
+		
+	}
+	&:hover{
+		article{
+			.subtitle.time{
+				display: block;
+			}
+			.subtitle.km{
+				display: none;
+
 			}
 		}
 	}
+	.commentText{
+		font-size: 15px;
+		line-height: 1.53;
+		color: #666666;
+		a{
+			color: #15a2a3;
+		}
+	}
+}
+
+@media (max-width: 670px) {
+.comment{
+	display: block;
+	app-photo-comment {
+		flex: 6;
+	}
+	app-option-comment {
+		flex:6;
+	}
+
+}
 }

@@ -1,1 +1,8 @@
-<section id="radar"></section>
+<section id="radar">	
+	<article>
+		<div class="me" *ngIf="data?.picture?.data.url">
+			<img [src]="data?.picture?.data.url" alt="">
+		</div>
+
+	</article>
+</section>

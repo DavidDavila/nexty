@@ -8,9 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class OptionCommentComponent implements OnInit {
 
 	@Input() likes: number;
-	public textTooltip: string = 'You <span class="ico ico-heart"></span> this';
+	public textTooltip: string = 'You <span class="ico ico-heart active"></span> this';
 	public showTooltip: boolean = false;
-  public options: Array<string> = ['<span class="ico ico-heart"></span>Delete post','<span class="ico-heart in"></span>Report']
+  public options: Array<string> = ['<span class="ico ico-delete"></span>Delete post','<span class="ico-report"></span>Report']
   constructor() { }
 
   ngOnInit() {
