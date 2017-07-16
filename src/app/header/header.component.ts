@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FacebookService } from './../shared/services/facebook.service';
 @Component({
   selector: 'app-header',
@@ -6,7 +6,7 @@ import { FacebookService } from './../shared/services/facebook.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
+  @Output() showModal = new EventEmitter();
 	public data: any;
   constructor(private _fb: FacebookService) { }
   ngOnInit() {

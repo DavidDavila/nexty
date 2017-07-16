@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -13,10 +13,15 @@ import { ContextMenuComponent } from './shared/components/context-menu/context-m
 import { InputComponent } from './dashboard/input/input.component';
 import { MenuButtonComponent } from './header/menu-button/menu-button.component';
 
+import { GeolocationService } from './shared/services/geolocation.service';
 import { FacebookService } from './shared/services/facebook.service';
 import { ContenteditableDirective } from './shared/directives/contenteditable.directive';
 import { PhotoCommentComponent } from './shared/components/photo-comment/photo-comment.component';
 import { OptionCommentComponent } from './shared/components/option-comment/option-comment.component';
+import { ModalProfileComponent } from './shared/components/modal-profile/modal-profile.component';
+import { ModalTermsComponent } from './shared/components/modal-terms/modal-terms.component';
+import { ModalPolicyComponent } from './shared/components/modal-policy/modal-policy.component';
+import { ModalCookiesComponent } from './shared/components/modal-cookies/modal-cookies.component';
 
 
 @NgModule({
@@ -33,14 +38,20 @@ import { OptionCommentComponent } from './shared/components/option-comment/optio
     ContenteditableDirective,
     PhotoCommentComponent,
     OptionCommentComponent,
+    ModalProfileComponent,
+    ModalTermsComponent,
+    ModalPolicyComponent,
+    ModalCookiesComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule
   ],
   providers: [
-    FacebookService
+    FacebookService,
+    GeolocationService
   ],
   bootstrap: [AppComponent]
 })
