@@ -19,6 +19,9 @@ import { ContenteditableDirective } from './shared/directives/contenteditable.di
 import { PhotoCommentComponent } from './shared/components/photo-comment/photo-comment.component';
 import { OptionCommentComponent } from './shared/components/option-comment/option-comment.component';
 import { ModalProfileComponent } from './shared/components/modal-profile/modal-profile.component';
+import { ModalTermsComponent } from './shared/components/modal-terms/modal-terms.component';
+import { ModalPolicyComponent } from './shared/components/modal-policy/modal-policy.component';
+import { ModalCookiesComponent } from './shared/components/modal-cookies/modal-cookies.component';
 
 
 @NgModule({
@@ -36,6 +39,9 @@ import { ModalProfileComponent } from './shared/components/modal-profile/modal-p
     PhotoCommentComponent,
     OptionCommentComponent,
     ModalProfileComponent,
+    ModalTermsComponent,
+    ModalPolicyComponent,
+    ModalCookiesComponent,
   ],
   imports: [
     BrowserModule,

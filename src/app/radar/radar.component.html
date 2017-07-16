@@ -1,1 +1,6 @@
-<section id="radar"></section>
+<section id="radar">
+	<div id="distance" (click)="showDistance = !showDistance" [ngClass]="{'disabled': showDistance}">
+		Distancia: {{selectedOption}}
+		<app-context-menu (setOption)="setDistance($event)" *ngIf="showDistance" [options]="optionsDistance" [style]="'bottom'"></app-context-menu>		
+	</div>
+</section>
