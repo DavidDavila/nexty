@@ -1,3 +1,4 @@
-<app-header></app-header>
+<app-header (showModal) ="modal = $event"></app-header>
 <app-radar></app-radar>
 <app-dashboard></app-dashboard>
+<app-modal-profile (showModal) =" modal = $event " *ngIf="modal === 'modal-profile'"></app-modal-profile>

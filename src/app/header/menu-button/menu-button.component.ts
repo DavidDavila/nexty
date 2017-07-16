@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FacebookService } from '../../shared/services/facebook.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { FacebookService } from '../../shared/services/facebook.service';
   styleUrls: ['./menu-button.component.scss']
 })
 export class MenuButtonComponent implements OnInit {
+
+  @Output() selectModal = new EventEmitter();
 
 	public isMenuOpen: boolean = false;
 

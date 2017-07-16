@@ -1,0 +1,50 @@
+<section id="modal-profile" class="modal">
+	<article>
+		<div class="close" (click)="showModal.emit(undefined)"></div>
+		<header>
+			<a (click)="isEditing = !isEditing">{{ !isEditing ? 'Edit your profile' : 'View your profile'}}</a>
+		</header>
+		<section>
+			<section>
+				<article class="profile">
+					<img [src]="data?.picture?.data.url" alt="">
+					<h2>{{data.name}}</h2>
+					
+					<span>{{dataLocation.city?.city}}</span>
+					<a  *ngIf="!isEditing" href="" target="_blank">akirakurosawa.info</a>
+					<p *ngIf="!isEditing" >
+						ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+					</p>
+					<ul *ngIf="!isEditing" >
+						<li><a class="fb" href=""></a></li>
+						<li><a class="in" href=""></a></li>
+						<li><a class="tw" href=""></a></li>
+						<li><a class="li" href=""></a></li>
+					</ul>
+					<form *ngIf="isEditing" (ngSubmit)="onSubmit()" [formGroup]="form" novalidate>
+						<label for="form.twitter">Twitter</label>
+						<input id="form.twitter" formControlName="twitter" type="text">
+						<label for="form.instagram">Instagram</label>
+						<input id="form.instagram" formControlName="instagram" type="text">
+						<label for="form.linkedin">Linkedin</label>
+						<input id="form.linkedin" formControlName="linkedin" type="text">
+						<label for="form.web">Web</label>
+						<input id="form.web" formControlName="web" type="text">
+						<label for="form.comment">Something to say?</label>
+						<textarea id="form.comment" formControlName="comment"></textarea>
+						<div>
+							<button>Save</button>
+						</div>
+					</form>
+
+					
+				</article>
+				<article class="comments" *ngIf="!isEditing">
+					<app-comment></app-comment>
+					<app-comment></app-comment>
+					<app-comment></app-comment>
+				</article>
+			</section>
+		</section>
+	</article>
+</section>

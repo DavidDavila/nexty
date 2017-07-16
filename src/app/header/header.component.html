@@ -1,6 +1,6 @@
 <header>
-	<app-menu-button></app-menu-button>
-	<dl *ngIf="data?.picture?.data.url">
+	<app-menu-button (selectModal)="showModal.emit($event)"></app-menu-button>
+	<dl *ngIf="data?.picture?.data.url"(click)="showModal.emit('modal-profile')">
 		<dt><img [src]="data?.picture?.data.url" alt=""></dt>
 		<dd>{{data.first_name}}</dd>
 	</dl>

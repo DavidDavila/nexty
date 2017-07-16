@@ -1,0 +1,96 @@
+section#modal-profile{
+	header{
+		a{
+			float: right;
+		}
+	}
+	article > section{		
+		height: 100%;
+	    max-height: calc(80vh - 110px);
+	    overflow-y: auto;
+	    width: 100%;
+	    margin-top: 67px;
+		>section{
+			>article.profile{
+				max-width: 350px;
+				text-align: center;
+				margin: 0 auto 96px;
+				img{
+					width: 120px;
+					height: 120px;
+					border-radius: 50%;
+					object-fit: contain;
+					margin-bottom: 20px;
+				}
+				h2{
+					font-size: 20px;
+					font-weight: bold;
+					margin-bottom: 10px;
+				}
+				span{
+					font-size: 15px;
+					color: #666666;
+					margin-bottom: 26px;
+					display: block
+				}
+				a{
+					margin-bottom: 10px; 						
+    				display: block;
+				}
+				p{
+					font-size: 15px;
+					line-height: 1.67;
+					color: #666666;
+					margin-bottom: 40px; 					
+				}
+				ul{
+					li{
+						display: inline-block;
+						a{
+							padding: 0 25px;
+							width: 24px;
+							height: 24px;
+							background-position: center;
+							background-size: contain;
+							background-repeat: no-repeat;		
+						}
+					}
+				}
+				form{
+					width: 340px;
+					margin-top: 52px;
+					text-align: left;
+					label{
+						font-size: 15px;
+						font-weight: bold;
+						margin-bottom: 5px;
+						display: block;
+						width: 100%;
+					}
+					input, textarea{
+						display: block;
+						width: 100%;
+						background-color: #ffffff;
+						border: solid 1px #b2b2b2;
+						padding:7px 12px;
+						font-size: 15px;
+						line-height: 1.53;
+						color: #666666;
+						resize: none;
+						margin-bottom: 20px;
+					}
+					textarea{
+						height: 76px;
+						margin-bottom: 30px;
+					}
+					>div{
+						text-align: right;
+					}
+				}
+			}
+			>article.comments{			
+			}
+		}
+	}
+
+}
