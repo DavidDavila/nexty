@@ -1,6 +1,6 @@
 <article id="user-box" >
 	<div id="comment-user" >
-		<img [src]="data?.picture?.data.url" alt="">
+		<img *ngIf="data?.picture?.data.url" [src]="data?.picture?.data.url" alt="">
 		<div contenteditable="true" [ceModel]="name"
         [ceDefault]="'Anything to share with people around you'" (ceChange)= "name=$event"></div>
         <ul *ngIf="uploadedImages !== []" id="images">

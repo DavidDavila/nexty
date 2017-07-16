@@ -18,7 +18,7 @@ export class RadarComponent implements OnInit {
 		'750 m',
 		'1 km',		
 	]
-  constructor() { }
+  constructor(private _fb: FacebookService) { }
 
   ngOnInit() {
   	this.selectedOption = this.optionsDistance[4];
